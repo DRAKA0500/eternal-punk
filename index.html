@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETERNAL PUNK</title>
+    <title>T-Shirt Store - Kaos Berkualitas dengan Desain Minimalis</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .product-card:hover {
@@ -11,141 +11,96 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         .product-image {
-            height: 300px;
-            object-fit: cover;
             transition: transform 0.3s ease;
         }
         .product-card:hover .product-image {
-            transform: scale(1.03);
-        }
-        .cta-button {
-            transition: all 0.3s ease;
-        }
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transform: scale(1.05);
         }
     </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Header Section -->
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
     <header class="bg-white shadow-sm">
-        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
-            <div class="flex items-center">
-                <div class="w-10 h-10 bg-indigo-600 rounded-full mr-3"></div>
-                <h1 class="text-2xl font-bold text-gray-800">Fashion Store</h1>
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-gray-800">ETERNAL<span class="text-indigo-600">PUNK</span></div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-800 hover:text-indigo-600">Beranda</a>
+                    <a href="#products" class="text-gray-800 hover:text-indigo-600">Produk</a>
+                    <a href="#about" class="text-gray-800 hover:text-indigo-600">Tentang</a>
+                    <a href="#contact" class="text-gray-800 hover:text-indigo-600">Kontak</a>
+                </nav>
+                <button class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
             </div>
-            <nav class="hidden md:block">
-                <ul class="flex space-x-8">
-                    <li><a href="#home" class="text-gray-600 hover:text-indigo-600">Beranda</a></li>
-                    <li><a href="#products" class="text-gray-600 hover:text-indigo-600">Produk</a></li>
-                    <li><a href="#about" class="text-gray-600 hover:text-indigo-600">Tentang Kami</a></li>
-                    <li><a href="#contact" class="text-gray-600 hover:text-indigo-600">Kontak</a></li>
-                </ul>
-            </nav>
-            <button class="md:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-indigo-600 text-white py-20">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">Koleksi Pakaian Elegan</h1>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">Temukan gaya terbaik Anda dengan koleksi eksklusif kami yang selalu mengikuti tren terkini</p>
-            <a href="#products" class="cta-button inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium">Lihat Produk</a>
+    <section class="bg-gradient-to-r from-indigo-50 to-gray-50 py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Kaos Berkualitas dengan <span class="text-indigo-600">Desain Esklusiv</span></h1>
+                <p class="text-gray-600 mb-8">Khusus anggota (sertakan bukti KTA atau id card) gratis ongkir di area jawa atau dapat menggunakan shope untuk mendapatkan diskon ongkir.</p>
+                <button class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition duration-300"onclick="window.location.href='link-koleksi'">Lihat Koleksi</button>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <a href="https://imgbb.com/"><img src="https://i.ibb.co.com/7t5Mzd01/D39-BFD5-E-A6-DE-42-BB-997-B-E4-F74-AEFB4-D9.png" alt="D39-BFD5-E-A6-DE-42-BB-997-B-E4-F74-AEFB4-D9" border="0"></a>
+</div>
         </div>
     </section>
 
     <!-- Products Section -->
-    <section id="products" class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Produk Kami</h2>
-            
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Etalase kami</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Product 1 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
-                    <div class="relative">
-                        <img src="https://placehold.co/600x400" alt="Kemeja pria formal berwarna biru navy dengan detail jahitan premium" class="w-full product-image">
-                        <div class="absolute top-2 right-2 bg-indigo-600 text-white px-2 py-1 rounded text-xs font-medium">TERBAIK</div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative overflow-hidden h-80">
+                        <img <a href="https://ibb.co.com/kshTHg0F"><img src="https://i.ibb.co.com/zTSgnhbw/F2-F43840-1646-4460-B50-C-FA5-E24-FB3319.png" alt="F2-F43840-1646-4460-B50-C-FA5-E24-FB3319" border="0"></a>
+                        <div class="absolute top-4 right-4 bg-indigo-600 text-white text-xs px-3 py-1 rounded-full">NEW</div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Kemeja Formal Pria</h3>
-                        <p class="text-gray-600 mb-4">Kemeja premium dengan bahan katun pilihan yang nyaman digunakan seharian.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-xl font-bold text-indigo-600">Rp 249.000</span>
-                            <button onclick="redirectToWhatsApp(1)" class="cta-button bg-indigo-600 text-white px-4 py-2 rounded-lg">Beli Sekarang</button>
+                        <h3 class="text-xl font-semibold text-gray-800">Basic Tee White</h3>
+                        <p class="text-gray-600 mt-2">Kaos basic berkualitas premium dengan bahan katun combed 30s</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-indigo-600 font-bold">Rp149.000</span>
+                            <button class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">Beli Sekarang</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Product 2 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
-                    <img src="https://placehold.co/600x400" alt="Dress wanita berwarna merah muda dengan detail renda dan motif bunga" class="w-full product-image">
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative overflow-hidden h-80">
+                       <a href="https://ibb.co.com/kshTHg0F"><img src="https://i.ibb.co.com/zTSgnhbw/F2-F43840-1646-4460-B50-C-FA5-E24-FB3319.png" alt="F2-F43840-1646-4460-B50-C-FA5-E24-FB3319" border="0"></a>
+                    </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Dress Wanita Elegant</h3>
-                        <p class="text-gray-600 mb-4">Dress dengan bahan yang adem dan jatuh sempurna untuk penampilan yang menawan.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-xl font-bold text-indigo-600">Rp 349.000</span>
-                            <button onclick="redirectToWhatsApp(2)" class="cta-button bg-indigo-600 text-white px-4 py-2 rounded-lg">Beli Sekarang</button>
+                        <h3 class="text-xl font-semibold text-gray-800">Black Essential</h3>
+                        <p class="text-gray-600 mt-2">Kaos hitam essential dengan finishing rapi dan jahitan premium</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-indigo-600 font-bold">Rp159.000</span>
+                            <button class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">Beli Sekarang</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Product 3 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
-                    <img src="https://placehold.co/600x400" alt="Celana jeans slim fit pria muda dengan warna biru medium dan sobekan fashion" class="w-full product-image">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Celana Jeans Slim Fit</h3>
-                        <p class="text-gray-600 mb-4">Jeans dengan potongan modis yang pas di badan dan nyaman digunakan sehari-hari.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-xl font-bold text-indigo-600">Rp 229.000</span>
-                            <button onclick="redirectToWhatsApp(3)" class="cta-button bg-indigo-600 text-white px-4 py-2 rounded-lg">Beli Sekarang</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
-                    <img src="https://placehold.co/600x400" alt="Blouse wanita kasual warna putih dengan motif floral dan lengan pendek" class="w-full product-image">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Blouse Wanita Kasual</h3>
-                        <p class="text-gray-600 mb-4">Blouse dengan bahan yang ringan dan desain yang stylish untuk berbagai kesempatan.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-xl font-bold text-indigo-600">Rp 179.000</span>
-                            <button onclick="redirectToWhatsApp(4)" class="cta-button bg-indigo-600 text-white px-4 py-2 rounded-lg">Beli Sekarang</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 5 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
-                    <div class="relative">
-                        <img src="https://placehold.co/600x400" alt="Setelan jas pria formal warna hitam dengan kemeja putih dan dasi" class="w-full product-image">
-                        <div class="absolute top-2 right-2 bg-indigo-600 text-white px-2 py-1 rounded text-xs font-medium">BARU</div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative overflow-hidden h-80">
+                       <a href="https://ibb.co.com/kshTHg0F"><img src="https://i.ibb.co.com/zTSgnhbw/F2-F43840-1646-4460-B50-C-FA5-E24-FB3319.png" alt="F2-F43840-1646-4460-B50-C-FA5-E24-FB3319" border="0"></a>
+                        <div class="absolute top-4 right-4 bg-red-500 text-white text-xs px-3 py-1 rounded-full">SALE</div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Setelan Jas Formal</h3>
-                        <p class="text-gray-600 mb-4">Setelan jas premium untuk acara formal dengan bahan yang berkualitas tinggi.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-xl font-bold text-indigo-600">Rp 899.000</span>
-                            <button onclick="redirectToWhatsApp(5)" class="cta-button bg-indigo-600 text-white px-4 py-2 rounded-lg">Beli Sekarang</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 6 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
-                    <img src="https://placehold.co/600x400" alt="Rok wanita midi berwarna hitam dengan lipit depan dan bahan yang mengikuti bentuk tubuh" class="w-full product-image">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Rok Midi Wanita</h3>
-                        <p class="text-gray-600 mb-4">Rok dengan panjang tepat di bawah lutut yang elegan dengan berbagai pilihan warna.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-xl font-bold text-indigo-600">Rp 199.000</span>
-                            <button onclick="redirectToWhatsApp(6)" class="cta-button bg-indigo-600 text-white px-4 py-2 rounded-lg">Beli Sekarang</button>
+                        <h3 class="text-xl font-semibold text-gray-800">Minimalist Grey</h3>
+                        <p class="text-gray-600 mt-2">Kaos dengan desain minimalis dan bahan yang sangat ringan</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-indigo-600 font-bold"><span class="line-through text-gray-400">Rp179.000</span> Rp129.000</span>
+                            <button class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">Beli Sekarang</button>
                         </div>
                     </div>
                 </div>
@@ -153,38 +108,98 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                    <img src="https://placehold.co/600x400" alt="Toko fisik kami yang modern dengan rak pakaian rapi dan desain interior minimalis" class="w-full rounded-lg shadow-md">
+    <!-- Features Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Mengapa Memilih Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-white rounded-lg shadow-sm">
+                    <div class="flex justify-center mb-4">
+                        <img src="https://placehold.co/100" alt="Ikon premium quality dengan simbol bintang dan perisai garansi kualitas" class="w-16 h-16 object-contain">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Kualitas Premium</h3>
+                    <p class="text-gray-600">Menggunakan bahan katun combed 30s dengan jahitan rantai dan finishing rapi.</p>
                 </div>
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Tentang Fashion Store</h2>
-                    <p class="text-gray-600 mb-4">Fashion Store adalah toko pakaian yang berkomitmen untuk menyediakan produk berkualitas tinggi dengan harga terjangkau. Kami percaya bahwa setiap orang berhak tampil stylish tanpa harus mengorbankan kenyamanan.</p>
-                    <p class="text-gray-600 mb-4">Dengan tim desainer profesional, kami selalu mengikuti perkembangan tren fashion terbaru untuk memberikan pilihan terbaik kepada pelanggan kami.</p>
-                    <p class="text-gray-600">Kualitas bahan, detail jahitan, dan kepuasan pelanggan adalah prioritas utama kami.</p>
+                <div class="text-center p-6 bg-white rounded-lg shadow-sm">
+                    <div class="flex justify-center mb-4">
+                        <img src="https://placehold.co/100" alt="Ikon sustainable dengan simbol daun dan panah daur ulang untuk produksi ramah lingkungan" class="w-16 h-16 object-contain">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Ramah Lingkungan</h3>
+                    <p class="text-gray-600">Proses produksi yang berkelanjutan dengan bahan dan tinta ramah lingkungan.</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow-sm">
+                    <div class="flex justify-center mb-4">
+                        <img src="https://placehold.co/100" alt="Ikon satisfaction guarantee dengan simbol checklist dan wajah tersenyum" class="w-16 h-16 object-contain">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Garansi Kepuasan</h3>
+                    <p class="text-gray-600">Garansi uang kembali 7 hari jika produk tidak sesuai ekspektasi.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Hubungi Kami</h2>
-            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
-                <div class="mb-6">
-                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Informasi Kontak</h3>
-                    <p class="text-gray-600 mb-2"><span class="font-medium">Alamat:</span> Jl. Fashion No. 123, Jakarta</p>
-                    <p class="text-gray-600 mb-2"><span class="font-medium">Telepon:</span> (021) 1234-5678</p>
-                    <p class="text-gray-600"><span class="font-medium">Email:</span> hello@fashionstore.com</p>
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Apa Kata Pelanggan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://placehold.co/100" alt="Foto profil pelanggan bernama Andi, pria dengan senyum ramah" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Andi Prasetyo</h4>
+                            <div class="flex text-yellow-400">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Kaosnya sangat nyaman dipakai, bahannya adem dan tidak panas. Desainnya simple tapi stylish, cocok untuk dipakai sehari-hari maupun acara santai."</p>
                 </div>
-                <div class="mb-6">
-                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Jam Operasional</h3>
-                    <p class="text-gray-600">Senin - Jumat: 09:00 - 21:00</p>
-                    <p class="text-gray-600">Sabtu - Minggu: 10:00 - 20:00</p>
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://placehold.co/100" alt="Foto profil pelanggan bernama Rina, wanita dengan gaya rambut pendek" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Rina Wijaya</h4>
+                            <div class="flex text-yellow-400">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Saya beli 3 warna berbeda semuanya bagus kualitasnya. Ukurannya pas sesuai size chart yang diberikan. Akan order lagi untuk koleksi warna lainnya."</p>
                 </div>
-                <div class="text-center">
-                    <a href="https://wa.me/6281234567890?text=Halo%20Fashion%20Store,%20s
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-indigo-600 text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Siap Memperbarui Lemari Pakaian Anda?</h2>
+            <p class="text-indigo-100 mb-8 max-w-2xl mx-auto">Dapatkan kaos premium berkualitas dengan harga terjangkau. Berbelanja sekarang dan dapatkan pengalaman berbusana yang lebih baik.</p>
+            <button class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Belanja Sekarang</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">TEESTORE</h3>
+                    <p class="text-gray-400">Brand kaos berkualitas dengan desain minimalis untuk gaya hidup modern.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Produk</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Kaos Pria</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Kaos Wanita</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Koleksi Terbaru</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Diskon</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Perusahaan</h4>
