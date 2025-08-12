@@ -3,203 +3,410 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T-Shirt Store - Kaos Berkualitas dengan Desain Minimalis</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>ETERNAL PUNK</title>
     <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        /* Style Dasar */
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-image: url('https://i.ibb.co.com/0yjKkXvS/87-E114-A5-D8-EF-4-AFE-9-EE8-B74-A9-E084-A7-E.png');
+  background-size: cover;
+  background-position: center;
+}
+        
+        .logo {
+  				width: 150px;
+  				height: auto;
+				font-size: 2rm;
+}
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 5px;
+        }
+        
+        .nav-links a:hover {
+            color: #FF000;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.ibb.co.com/7t5Mzd01/D39-BFD5-E-A6-DE-42-BB-997-B-E4-F74-AEFB4-D9.png');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+        }
+        
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #c0392b;
+            transform: translateY(-3px);
+        }
+        
+        /* Product Section */
+        .products {
+            padding: 80px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
         .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
         }
+        
         .product-image {
-            transition: transform 0.3s ease;
+            height: 250px;
+            overflow: hidden;
         }
-        .product-card:hover .product-image {
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image img {
             transform: scale(1.05);
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .price {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: #2c3e50;
+            color: white;
+            padding: 80px 50px;
+            text-align: center;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: left;
+            padding: 0 20px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+                flex-direction: column;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+            }
+            
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .nav-links li {
+                margin: 0 5px;
+            }
+            
+            .hero h1 {
+             font-size: 2rem;
+				 color: #FFFF;
+				text-shadow: 0px 					2px 4px rgba(0, 0, 				0, 0.2);
+				font-family: 						'Montserrat', sans-				serif;
+				font-weight: bold;
+				
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
         }
     </style>
 </head>
-<body class="bg-gray-50 font-sans">
+<body>
     <!-- Header -->
-    <header class="bg-white shadow-sm">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-gray-800">ETERNAL<span class="text-indigo-600">PUNK</span></div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#" class="text-gray-800 hover:text-indigo-600">Beranda</a>
-                    <a href="#products" class="text-gray-800 hover:text-indigo-600">Produk</a>
-                    <a href="#about" class="text-gray-800 hover:text-indigo-600">Tentang</a>
-                    <a href="#contact" class="text-gray-800 hover:text-indigo-600">Kontak</a>
-                </nav>
-                <button class="md:hidden">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">.</div>
+            <ul class="nav-links">
+  </div>
+
     </header>
-
+    
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-indigo-50 to-gray-50 py-20">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Kaos Berkualitas dengan <span class="text-indigo-600">Desain Esklusiv</span></h1>
-                <p class="text-gray-600 mb-8">Khusus anggota (sertakan bukti KTA atau id card) gratis ongkir di area jawa atau dapat menggunakan shope untuk mendapatkan diskon ongkir.</p>
-                <button class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition duration-300"onclick="window.location.href='link-koleksi'">Lihat Koleksi</button>
-            </div>
-            <div class="md:w-1/2 flex justify-center">
-                <a href="https://imgbb.com/"><img src="https://i.ibb.co.com/7t5Mzd01/D39-BFD5-E-A6-DE-42-BB-997-B-E4-F74-AEFB4-D9.png" alt="D39-BFD5-E-A6-DE-42-BB-997-B-E4-F74-AEFB4-D9" border="0"></a>
-</div>
-        </div>
+    <section class="hero" id="home">
+        <a href="#products" class="btn">Lihat Produk</a>
     </section>
-
-    <!-- Products Section -->
-    <section id="products" class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Etalase kami</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Product 1 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="relative overflow-hidden h-80">
-                        <img <a href="https://ibb.co.com/kshTHg0F"><img src="https://i.ibb.co.com/zTSgnhbw/F2-F43840-1646-4460-B50-C-FA5-E24-FB3319.png" alt="F2-F43840-1646-4460-B50-C-FA5-E24-FB3319" border="0"></a>
-                        <div class="absolute top-4 right-4 bg-indigo-600 text-white text-xs px-3 py-1 rounded-full">NEW</div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800">Basic Tee White</h3>
-                        <p class="text-gray-600 mt-2">Kaos basic berkualitas premium dengan bahan katun combed 30s</p>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-indigo-600 font-bold">Rp149.000</span>
-                            <button class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">Beli Sekarang</button>
-                        </div>
-                    </div>
+    
+    <!-- Product Section -->
+    <section class="products" id="products">
+        <div class="section-title">
+            <h2>Koleksi Kami</h2>
+        </div>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.ibb.co.com/3y80fzwS/1-CC9-E1-F9-30-CD-4816-A1-C1-D3898-C87-D9-C0.png" alt="Kaos hitam polos dengan logo sederhana di dada kiri depan" />
                 </div>
-
-                <!-- Product 2 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="relative overflow-hidden h-80">
-                       <a href="https://ibb.co.com/kshTHg0F"><img src="https://i.ibb.co.com/zTSgnhbw/F2-F43840-1646-4460-B50-C-FA5-E24-FB3319.png" alt="F2-F43840-1646-4460-B50-C-FA5-E24-FB3319" border="0"></a>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800">Black Essential</h3>
-                        <p class="text-gray-600 mt-2">Kaos hitam essential dengan finishing rapi dan jahitan premium</p>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-indigo-600 font-bold">Rp159.000</span>
-                            <button class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">Beli Sekarang</button>
-                        </div>
-                    </div>
+                <div class="product-info">
+                    <h3>ETERNAL STREET FIGHT</h3>
+                    <div class="price">Rp 70.000</div>
+                    <a href="wa.me/62882003103751?text=Tolong%20Deskripsikan%20Etalase%201" class="btn">Beli Sekarang</a>
                 </div>
-
-                <!-- Product 3 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="relative overflow-hidden h-80">
-                       <a href="https://ibb.co.com/kshTHg0F"><img src="https://i.ibb.co.com/zTSgnhbw/F2-F43840-1646-4460-B50-C-FA5-E24-FB3319.png" alt="F2-F43840-1646-4460-B50-C-FA5-E24-FB3319" border="0"></a>
-                        <div class="absolute top-4 right-4 bg-red-500 text-white text-xs px-3 py-1 rounded-full">SALE</div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800">Minimalist Grey</h3>
-                        <p class="text-gray-600 mt-2">Kaos dengan desain minimalis dan bahan yang sangat ringan</p>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-indigo-600 font-bold"><span class="line-through text-gray-400">Rp179.000</span> Rp129.000</span>
-                            <button class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">Beli Sekarang</button>
-                        </div>
-                    </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.ibb.co.com/XfwDg9Rt/CB263-E98-7-A02-4459-BE84-69-D6-F07327-DA.jpg" alt="Kaos putih dengan desain grafis modern di bagian depan" />
+                </div>
+                <div class="product-info">
+                    <h3>ETERNAL PEMBANTAI PENGHIANAT</h3>
+                    <div class="price">Rp 70.000</div>
+                    <a href="#" class="btn">Beli Sekarang</a>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ca320228-eeab-4113-ae43-eabbd351dd6f.png" alt="Kaos abu-abu dengan garis-garis tipis horizontal halus" />
+                </div>
+                <div class="product-info">
+                    <h3>ETERNAL</h3>
+                    <div class="price">Rp 70.000</div>
+                    <a href="wa.me/62882003103751?text=Tolong%20Deskripsikan%20Etalase%202" class="btn">Beli Sekarang</a>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ca320228-eeab-4113-ae43-eabbd351dd6f.png" alt="Kaos biru navy dengan logo kecil di dada dan detail jahitan merah" />
+                </div>
+                <div class="product-info">
+                    <h3>ETERNAL</h3>
+                    <div class="price">Rp 70.000</div>
+                    <a href="wa.me/62882003103751?text=Tolong%20Deskripsikan%20Etalase%201" class="btn">Beli Sekarang</a>
                 </div>
             </div>
         </div>
     </section>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2>Tentang Brand Kami</h2>
+            <p>
+Kami adalah produsen kaos berkualitas dengan harga terjangkau. Bahan 30s yang lembut dan sablon plastisol yang tahan lama membuat produk kami menjadi pilihan tepat. Kami berkomitmen untuk memberikan produk terbaik dengan kontrol kualitas ketat. Jangan lewatkan promo-promo menarik kami!</p>
+            <p>
 
-    <!-- Features Section -->
-    <section id="about" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Mengapa Memilih Kami</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center p-6 bg-white rounded-lg shadow-sm">
-                    <div class="flex justify-center mb-4">
-                        <img src="https://placehold.co/100" alt="Ikon premium quality dengan simbol bintang dan perisai garansi kualitas" class="w-16 h-16 object-contain">
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Kualitas Premium</h3>
-                    <p class="text-gray-600">Menggunakan bahan katun combed 30s dengan jahitan rantai dan finishing rapi.</p>
-                </div>
-                <div class="text-center p-6 bg-white rounded-lg shadow-sm">
-                    <div class="flex justify-center mb-4">
-                        <img src="https://placehold.co/100" alt="Ikon sustainable dengan simbol daun dan panah daur ulang untuk produksi ramah lingkungan" class="w-16 h-16 object-contain">
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Ramah Lingkungan</h3>
-                    <p class="text-gray-600">Proses produksi yang berkelanjutan dengan bahan dan tinta ramah lingkungan.</p>
-                </div>
-                <div class="text-center p-6 bg-white rounded-lg shadow-sm">
-                    <div class="flex justify-center mb-4">
-                        <img src="https://placehold.co/100" alt="Ikon satisfaction guarantee dengan simbol checklist dan wajah tersenyum" class="w-16 h-16 object-contain">
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Garansi Kepuasan</h3>
-                    <p class="text-gray-600">Garansi uang kembali 7 hari jika produk tidak sesuai ekspektasi.</p>
-                </div>
-            </div>
+- M (Lebar Dada: 50-52 cm, Panjang: 68-70 cm)
+- L (Lebar Dada: 54-56 cm, Panjang: 72-74 cm)
+- XL (Lebar Dada: 58-60 cm, Panjang: 76-78 cm).</p>
         </div>
     </section>
-
-    <!-- Testimonials -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Apa Kata Pelanggan</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-50 p-8 rounded-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://placehold.co/100" alt="Foto profil pelanggan bernama Andi, pria dengan senyum ramah" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-800">Andi Prasetyo</h4>
-                            <div class="flex text-yellow-400">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600">"Kaosnya sangat nyaman dipakai, bahannya adem dan tidak panas. Desainnya simple tapi stylish, cocok untuk dipakai sehari-hari maupun acara santai."</p>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://placehold.co/100" alt="Foto profil pelanggan bernama Rina, wanita dengan gaya rambut pendek" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-800">Rina Wijaya</h4>
-                            <div class="flex text-yellow-400">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600">"Saya beli 3 warna berbeda semuanya bagus kualitasnya. Ukurannya pas sesuai size chart yang diberikan. Akan order lagi untuk koleksi warna lainnya."</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="bg-indigo-600 text-white py-16">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-4">Siap Memperbarui Lemari Pakaian Anda?</h2>
-            <p class="text-indigo-100 mb-8 max-w-2xl mx-auto">Dapatkan kaos premium berkualitas dengan harga terjangkau. Berbelanja sekarang dan dapatkan pengalaman berbusana yang lebih baik.</p>
-            <button class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Belanja Sekarang</button>
-        </div>
-    </section>
-
+    
     <!-- Footer -->
-    <footer id="contact" class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">TEESTORE</h3>
-                    <p class="text-gray-400">Brand kaos berkualitas dengan desain minimalis untuk gaya hidup modern.</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Produk</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Kaos Pria</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Kaos Wanita</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Koleksi Terbaru</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Diskon</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Perusahaan</h4>
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>NEWW BRAND</h3>
+                <p>Menjual kaos berkualitas dengan desain eksklusif untuk Anda.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Link Media Sosial Kami</h3>
+                <ul>
+                    <li><a href="#home">Whatsapp</a></li>
+                    <li><a href="#products">Instagram</a></li>
+                    <li><a href="#about">Facebook</a></li>
+                    <li><a href="#contact">Tiktok</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Kontak Kami</h3>
+                <ul>
+                    <li>Email: eternal_punk.com</li>
+                    <li>Telepon: ‪+62 882‑0031‑03751‬</li>
+                    <li>Alamat: Jl. Jolontoro Sambek Wonosobo</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024.ETERNAL PUNK Brand lokal.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Simple animation for product cards when they come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
